@@ -1,0 +1,33 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.apiskins/mcp",
+  "title": "API Skins",
+  "description": "CS2 skin prices across marketplaces, buy orders, sales, item data and Steam inventories.",
+  "version": "1.0.0",
+  "websiteUrl": "https://apiskins.com/ai-agents",
+  "repository": {
+    "url": "https://github.com/apiskins/mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://apiskins.com/logo.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": ["any"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.apiskins.com/mcp",
+      "headers": [
+        {
+          "name": "X-API-KEY",
+          "description": "Your API Skins key: sign in with Steam on https://apiskins.com/api-docs (free plan available)",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
