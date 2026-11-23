@@ -22,7 +22,7 @@ Data & Analytics
 - Up to 100 items per call
 - Hosted remote server: nothing to install
 - Read-only tools
-- Free plan included
+- Free plan included, with every tool and every marketplace
 
 ## Getting Started
 - "Where is an AK-47 Redline Field-Tested cheapest right now?"
@@ -31,8 +31,8 @@ Data & Analytics
 - Tool: find_items — exact market_hash_names from a few words of a name
 - Tool: get_offers — the cheapest listing on every marketplace
 - Tool: get_buy_orders — the highest buy orders
-- Tool: get_sales_summary — sales and median prices (paid plans)
-- Tool: get_items — what each item is (paid plans)
+- Tool: get_sales_summary — sales and median prices
+- Tool: get_items — what each item is
 - Tool: get_inventory — every CS2 item in a Steam inventory
 
 ## Tags
