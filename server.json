@@ -3,7 +3,7 @@
   "name": "com.apiskins/mcp",
   "title": "API Skins",
   "description": "CS2 skin prices across marketplaces, buy orders, sales, item data and Steam inventories.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://apiskins.com/ai-agents",
   "repository": {
     "url": "https://github.com/apiskins/mcp",
