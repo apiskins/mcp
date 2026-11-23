@@ -29,22 +29,22 @@ Sign in with Steam on [apiskins.com](https://apiskins.com) and copy your key fro
 | `find_items` | Exact `market_hash_name`s from a few words of a name, like "redline field tested". Use it first when unsure of a name. |
 | `get_offers` | The cheapest listing (lowest sell offer) of up to 100 items on every marketplace, in USD. |
 | `get_buy_orders` | The highest buy order of up to 100 items on each marketplace that has buy orders: what they sell for right now. |
-| `get_sales_summary` | Sales count, median and average price over the last 7, 15, 30 and 90 days, and typical 15-day volume. Paid plans. |
-| `get_items` | What each item is: type, weapon, wear and float range, quality, rarity, collections, cases, picture. Paid plans. |
+| `get_sales_summary` | Sales count, median and average price over the last 7, 15, 30 and 90 days, and typical 15-day volume. |
+| `get_items` | What each item is: type, weapon, wear and float range, quality, rarity, collections, cases, picture. |
 | `get_inventory` | Every CS2 item in a Steam inventory, by SteamID64 (public inventories) or by trade URL (private ones too): name, asset ID, class ID, instance ID, inspect link. |
 
 Every tool is read-only. Items are named by Steam's exact `market_hash_name`, like `AK-47 | Redline (Field-Tested)`. Prices are in US dollars.
 
 ## Plans
 
-Each tool call is one API request on your plan. `find_items` counts toward the per-minute limit only.
+Every plan, the free one too, answers every tool on every marketplace. Each tool call is one API request on your plan; `find_items` counts toward the per-minute limit only. Paid plans give more requests.
 
-| Plan | Price | Requests / 30 days | Requests / minute | Covers |
-| --- | --- | --- | --- | --- |
-| Free | $0 | 100 | 60 | Prices and buy orders from a limited set of marketplaces, Steam inventories |
-| Trader | $14.99 / month | 5,000 | 120 | Every marketplace, sales and item data |
-| Pro | $49.99 / month | 25,000 | 300 | Every marketplace, sales and item data |
-| Business | $119.99 / month | 100,000 | 300 | Every marketplace, sales and item data |
+| Plan | Price | Requests / 30 days | Requests / minute |
+| --- | --- | --- | --- |
+| Free | $0 | 100 | 60 |
+| Trader | $14.99 / month | 5,000 | 120 |
+| Pro | $49.99 / month | 25,000 | 300 |
+| Business | $119.99 / month | 100,000 | 300 |
 
 See [apiskins.com/pricing](https://apiskins.com/pricing) for the current plans.
 
@@ -94,7 +94,7 @@ Any client that takes a Streamable HTTP URL and headers: URL `https://api.apiski
 ## Notes
 
 - Over the per-minute limit, a tool answers with an error; wait a few seconds before calling again.
-- A tool's error says why: a wrong name, a missing key, a route that needs a paid plan, or a private inventory asked for by Steam ID.
+- A tool's error says why: a wrong name, a missing key, the plan's limit reached, or a private inventory asked for by Steam ID.
 
 ## Links
 
